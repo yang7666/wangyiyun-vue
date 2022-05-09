@@ -13,30 +13,34 @@
           <p class="song_name">{{item.name}}</p>
         </van-col>
       <p class="title">最新音乐</p>
-      <van-cell-group>
-        <van-cell center title="刚发的广泛地给对方" label="描述信息" >
-          <template #right-icon>
-            <van-icon name="play-circle-o" class="search-icon" />
-          </template>
-        </van-cell>
-      </van-cell-group>
+      <SongItem v-for="item in latestMusic" :key="item.id" 
+      :name="item.name"
+      :author="item.song.artists[0].name"
+      :id="item.id"
+       ></SongItem>
 
       </van-row>
   </div>
 </template>
 
 <script>
-import {recommendMusicAPI} from "@/api"
+import {recommendMusicAPI,recommendLatestMusicAPI} from "@/api"
+import SongItem from "@/components/SongItem.vue"
 export default {
+  components:{SongItem},
   data(){
     return{
-      recommendList:[] //推荐歌单
+      recommendList:[], //推荐歌单
+      latestMusic:[]
     }
   },
   async created(){
     const res = await recommendMusicAPI({limit:6})
     this.recommendList = res.data.result;
     console.log(this.recommendList);
+    const res2 = await recommendLatestMusicAPI({limit:17})
+    this.latestMusic = res2.data.result;
+    console.log(this.latestMusic);
   }
 
 }

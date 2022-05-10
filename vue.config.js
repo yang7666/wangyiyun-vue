@@ -4,9 +4,9 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave:false,
-  devServer:{
-    proxy:'https://netease-cloud-music-api-kohl-zeta.vercel.app/'
-  },
+  // devServer:{
+  //   proxy:'https://netease-cloud-music-api-kohl-zeta.vercel.app/'
+  // },
   css: {
     loaderOptions: {
       less: {

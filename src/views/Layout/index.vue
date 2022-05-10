@@ -1,17 +1,17 @@
 <template>
   <div>
-    <van-nav-bar :title='activTitle' fixed />
-    <div class="main">
-        <keep-alive>
-            <router-view />
-        </keep-alive>
-        
-    </div>
+        <van-nav-bar :title='activTitle' fixed />
+        <div class="main">
+            <keep-alive>
+                <router-view />
+            </keep-alive>
+            
+        </div>
      
-    <van-tabbar route  @change="ChangeFn" fixed>
-        <van-tabbar-item replace name="首页" to="/layout/home" icon="home-o">首页</van-tabbar-item>
-        <van-tabbar-item replace name="搜索" to="/layout/search" icon="search">搜索</van-tabbar-item>
-    </van-tabbar>
+        <van-tabbar route  @change="ChangeFn" fixed>
+            <van-tabbar-item replace name="首页" to="/layout/home" icon="home-o">首页</van-tabbar-item>
+            <van-tabbar-item replace name="搜索" to="/layout/search" icon="search">搜索</van-tabbar-item>
+        </van-tabbar>
   </div>
 </template>
 

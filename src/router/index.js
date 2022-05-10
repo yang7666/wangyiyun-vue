@@ -4,7 +4,7 @@ import Layout from "@/views/Layout"
 import Home from "@/views/Home"
 import Search from "@/views/Search"
 import Play from "@/views/Play"
-// import Comment from "@/views/Comment"
+import Comment from "@/views/Comment"
 
 
 Vue.use(VueRouter)
@@ -39,10 +39,10 @@ const routes = [
         path:"/play",
         component:Play
     },
-    // {
-    //     path:"/comment",
-    //     component:Comment
-    // }
+    {
+        path:"/comment",
+        component:Comment
+    }
 ]
 
 const router = new VueRouter({

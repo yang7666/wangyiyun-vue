@@ -1,17 +1,19 @@
 <template>
 <!-- 封装歌曲组件 -->
-      <van-cell
-        center
-        :title='name'
-        :key="id"
-        :label="author +'-'+name"
-        @click="$router.push("/comment")"
-      >
-      <!-- {path:"/comment",query:id} -->
-        <template #right-icon>
-          <van-icon name="play-circle-o" class="search-icon" @touchstart="playFn"/>
-        </template>
-      </van-cell>
+      
+          <van-cell
+            center
+            :title='name'
+            :key="id"
+            :label="author +'-'+name"
+            @click="toComment()"
+          >
+        
+          <template #right-icon>
+            <van-icon name="play-circle-o" class="search-icon" @touchstart="playFn"/>
+          </template>
+        </van-cell>
+      
 </template>
 
 <script>
@@ -27,6 +29,9 @@ export default {
                 path:"/play",
                 query:{id:this.id}
             })
+        },
+        toComment(){
+          this.$router.push({path:"/comment",query:{id:this.id}})
         }
     }
 }

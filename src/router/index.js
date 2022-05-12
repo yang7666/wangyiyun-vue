@@ -5,6 +5,7 @@ import Home from "@/views/Home"
 import Search from "@/views/Search"
 import Play from "@/views/Play"
 import Comment from "@/views/Comment"
+import  Playlist from "@/views/Playlist"
 
 
 Vue.use(VueRouter)
@@ -42,6 +43,10 @@ const routes = [
     {
         path:"/comment",
         component:Comment
+    },
+    {
+        path:"/playlist",
+        component:Playlist
     }
 ]
 

@@ -59,7 +59,7 @@ export default {
         },
         async getList(){
             const res = await musicCommentAPI({
-                id:this.$route.query.id,
+                id:c,
                 limit:20,
                 offset:(this.page-1)*20
             })

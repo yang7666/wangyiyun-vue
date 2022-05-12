@@ -119,8 +119,6 @@ export default {
         // 秒数作为key, 对应歌词作为value
         lyricObj[ms + Number(ss)] = contentArr[index]
       })
-      // 返回得到的歌词对象(可以打印看看)
-      console.log(lyricObj);
       return lyricObj
     },
     audioStart() { // 播放按钮 - 点击事件

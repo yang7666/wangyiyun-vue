@@ -9,6 +9,7 @@
             height="3rem"
             fit="contain"
             :src="item.picUrl"
+             @click="toPlaylist(item.id)"
           />
           <p class="song_name">{{item.name}}</p>
         </van-col>
@@ -41,6 +42,14 @@ export default {
     const res2 = await recommendLatestMusicAPI({limit:17})
     this.latestMusic = res2.data.result;
     console.log(this.latestMusic);
+  },
+  methods:{
+    toPlaylist(id){
+      this.$router.push({
+        path:"/playlist",
+        query:{id:id}
+      })
+    }
   }
 
 }

@@ -6,6 +6,7 @@ import Search from "@/views/Search"
 import Play from "@/views/Play"
 import Comment from "@/views/Comment"
 import  Playlist from "@/views/Playlist"
+import  Personal from "@/views/Personal"
 
 
 Vue.use(VueRouter)
@@ -33,6 +34,14 @@ const routes = [
                 meta:{
                     title:"搜索"
                 }
+            },
+            {
+                path:"personal",
+                component:Personal,
+                meta:{
+                    title:"个人中心"
+                }
+
             }
         ]
     },

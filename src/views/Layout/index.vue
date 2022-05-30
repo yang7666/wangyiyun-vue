@@ -11,6 +11,7 @@
         <van-tabbar route  @change="ChangeFn" fixed>
             <van-tabbar-item replace name="首页" to="/layout/home" icon="home-o">首页</van-tabbar-item>
             <van-tabbar-item replace name="搜索" to="/layout/search" icon="search">搜索</van-tabbar-item>
+            <van-tabbar-item replace name="我的" to="/layout/personal" icon="https://b.yzcdn.cn/vant/icon-demo-1126.png">我的</van-tabbar-item>
         </van-tabbar>
   </div>
 </template>

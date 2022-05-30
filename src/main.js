@@ -8,7 +8,7 @@ import router from "@/router"
 
 // 全局注册 (自动按需引入)
 import { NavBar,Tabbar, TabbarItem,Col, Row,Image as VanImage ,
-   Cell, CellGroup,Icon,Search,Tag,PullRefresh,List  } from 'vant';
+   Cell, CellGroup,Icon,Search,Tag,PullRefresh,List,Field ,Button ,Form,Card } from 'vant';
 Vue.use(NavBar);
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
@@ -22,6 +22,10 @@ Vue.use(Search);
 Vue.use(Tag);
 Vue.use(PullRefresh);
 Vue.use(List);
+Vue.use(Field);
+Vue.use(Button);
+Vue.use(Form);
+Vue.use(Card);
 
 
 

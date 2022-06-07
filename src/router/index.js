@@ -7,7 +7,7 @@ import Play from "@/views/Play"
 import Comment from "@/views/Comment"
 import  Playlist from "@/views/Playlist"
 import  Personal from "@/views/Personal"
-
+import Likedlist from "@/views/Likedlist"
 
 Vue.use(VueRouter)
 
@@ -39,7 +39,8 @@ const routes = [
                 path:"personal",
                 component:Personal,
                 meta:{
-                    title:"个人中心"
+                    title:"个人中心",
+                    keepAlive: true
                 }
 
             }
@@ -56,6 +57,12 @@ const routes = [
     {
         path:"/playlist",
         component:Playlist
+    },
+    {
+        path:"/likedlist",
+        component:Likedlist,
+        meta: {keepAlive: true}
+     
     }
 ]
 

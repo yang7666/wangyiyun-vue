@@ -53,7 +53,7 @@
             <p class="nikname">{{userInfo.nickname}}</p>
       </div>
       <!-- 喜欢的音乐 -->
-      <div class="likedContent" @click="toLikedList">
+      <div v-if="uid" class="likedContent" @click="toLikedList">
             <div class="img_box">
                 <van-image
                 fit="fill"
